@@ -1,0 +1,1 @@
+<div class="alert alert-danger">Сумма заказа, должна быть больше {{ _price((int)_setting('order_minimum_amount')) }} рублей</div>

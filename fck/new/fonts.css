@@ -1,0 +1,5 @@
+@font-face {  
+    font-family: "roboto";  
+    src: url( ../fonts/font.eot ); /* IE */  
+    src: local("roboto"), url("../fonts/font.TTF") format("truetype"); /*non-IE*/  
+}

@@ -1,0 +1,45 @@
+#php_flag display_errors off
+php_flag register_globals off
+
+AddDefaultCharset windows-1251
+php_value default_charset windows-1251
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+RewriteRule ^.htaccess$ - [F]
+
+#Редирект на www
+RewriteCond %{HTTP_HOST} ^([^www].*)$
+RewriteRule ^(.*)$ https://www.%1/$1 [L,R=301]
+
+#RewriteCond %{HTTP:PORT} !^443$
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.migtele.ru/$1 [R,L]
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+    RewriteEngine On
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+
+
+<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
+

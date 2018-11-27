@@ -1,0 +1,1 @@
+<button class="spoiler-open">Показать все</button>

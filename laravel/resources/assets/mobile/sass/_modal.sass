@@ -1,0 +1,65 @@
+/** Modal **/
+
+.jquery-modal
+  z-index: 999
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(0, 0, 0, .2)
+  overflow-y: scroll
+
+.modal
+  position: absolute
+  z-index: 1000
+  box-shadow: 0 -1px 3px rgba(4, 6, 7, .10)
+  border: 1px solid #dedede
+  width: 100%
+  top: 50px
+  left: 0
+  background-color: #fff
+  box-sizing: border-box
+  padding: 24px 25px 25px
+  display: none
+  &.modal-large
+    width: 620px
+    margin-left: -310px
+    padding: 24px 19px 25px
+.close-modal
+  font-size: 0
+  position: absolute
+  top: 16px
+  right: 26px
+  width: 11px
+  height: 11px
+  background: url(../img/icons/modal-close.png) center no-repeat
+  border: none
+  cursor: pointer
+  outline: none
+  &:hover
+    opacity: .8
+
+.modal-header
+  text-align: center
+
+.modal-title
+  font-size: 20px
+  line-height: 20px
+
+.modal-description
+  margin-top: 10px
+  color: #212121
+  font-size: 13px
+  line-height: 18px
+
+.modal-content
+  margin-top: 19px
+
+.modal-form__recaptcha
+  text-align: center
+  margin-top: 16px
+  .g-recaptcha
+    display: inline-block
+
+/** Modal **/

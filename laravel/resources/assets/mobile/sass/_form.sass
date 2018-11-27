@@ -1,0 +1,183 @@
+@import "_mixins/transition"
+@import "vars"
+
+.checkbox
+  vertical-align: top
+  margin: 0 3px 0 0
+  width: 23px
+  height: 23px
+  opacity: 0
+
+.checkbox + label
+  display: block
+  width: 100%
+  padding-left: 100px
+  box-sizing: border-box
+  font-size: 45px
+  line-height: 66px
+  color: $third-color
+  position: relative
+
+.checkbox:not(checked)
+  position: absolute
+  opacity: 0
+
+.checkbox:not(checked) + label
+  position: relative
+
+
+.checkbox + label:before
+  content: ''
+  display: block
+  position: absolute
+  width: 68px
+  height: 66px
+  top: 0
+  left: 0
+  border: 3px solid #bcbcbc
+  box-sizing: border-box
+  border-radius: 5px
+  @include transition(all, .3s, ease-in-out)
+
+
+.checkbox:checked + label:after
+  content: ''
+  display: block
+  position: absolute
+  background: url(../img/icons/checked-checkbox.png)
+  width: 53px
+  height: 41px
+  top: 12px
+  left: 8px
+
+.checkbox:checked + label
+  color: #4eb801
+
+.radio
+  vertical-align: top
+  margin: 0 3px 0 0
+  width: 23px
+  height: 23px
+
+.radio + label
+  display: block
+  width: 100%
+  box-sizing: border-box
+  cursor: pointer
+  border: 1px solid #737373
+  border-radius: 4px
+  padding-left: 120px
+  font-size: 36px
+  line-height: 82px
+  color: $third-color
+
+
+.radio:not(checked)
+  position: absolute
+  opacity: 0
+
+.radio:not(checked) + label
+  position: relative
+
+.radio:not(checked) + label:before
+  content: ''
+  display: block
+  position: absolute
+  background: url(../img/icons/unchecked.png)
+  width: 64px
+  height: 64px
+  top: 11px
+  left: 29px
+  @include transition(all, .3s, ease-in-out)
+
+
+.radio:checked + label:before
+  background: url(../img/icons/checked.png)
+
+.radio:checked + label
+  color: #4eb801
+  border: 1px solid #4eb801
+
+
+.form-group
+  .label
+    font-size: 45px
+    line-height: 45px
+    color: $third-color
+    margin: 40px 0 10px
+    display: block
+    font-family: $default-font
+
+.form-group__radio_inline
+  font-size: 0
+  margin-top: 20px
+  .form-radio
+    display: inline-block
+    width: calc(50% - 12px)
+    margin-right: 24px
+    &:nth-child(2n+2)
+      margin-right: 0
+
+.form-radio
+  margin-bottom: 20px
+
+.form-group__checkboxes
+  .form-checkbox
+       border-bottom: 1px solid #dadada
+       padding-bottom: 40px
+       margin-bottom: 40px
+       &:last-child
+         margin-bottom: 0
+         padding-bottom: 0
+         border: none
+
+.form_group__radio_list
+  margin-top: 20px
+
+input.form-control
+  display: block
+  width: 100%
+  box-sizing: border-box
+  border: none
+  border-bottom: 1px solid #a2a2a2
+  outline: none
+  font-weight: 300
+  color: #383a49
+  font-size: 50px
+  line-height: 50px
+  font-family: $default-font
+
+textarea.form-control
+  display: block
+  width: 100%
+  box-sizing: border-box
+  border: none
+  border-bottom: 1px solid #a2a2a2
+  outline: none
+  font-weight: 300
+  color: #383a49
+  font-size: 50px
+  line-height: 60px
+  font-family: $default-font
+  resize: none
+
+.form-recaptcha
+  text-align: center
+  margin: 30px 0 40px
+  .recaptcha
+    display: inline-block
+
+
+button[type="submit"].btn
+  display: block
+  width: 100%
+  color: #ffffff
+  font-family: $second-font
+  font-weight: 300
+  text-align: center
+  font-size: 51px
+  line-height: 82px
+  @extend .border-shadow
+  background-color: $default-color
+  border-radius: 4px
+  outline: none

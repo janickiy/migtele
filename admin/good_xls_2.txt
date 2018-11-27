@@ -1,0 +1,116 @@
+<?
+require('inc/common.php');
+$tbl = "goods";
+$rubric = "Товары &raquo; XLS импорт";
+$top_menu = "goods";
+$id = (int)@$_GET['id'];
+
+// -------------------СОХРАНЕНИЕ----------------------
+if(isset($_GET["action"]))
+{
+	switch($_GET['action'])
+	{
+/*
+		case "export":
+			require('inc/excel_export.php'); // экспорт данных в Exel
+			$xls = new PhpToExcell();
+			$xls->ExBOF();
+			$xls->Rus();
+				
+			foreach($fields_name as $key=>$val)
+				$xls->WriteLabel(0,$key,0,0,0,$val);
+
+			$res = sql("SELECT g.*, m.name AS maker, s.name AS seriya
+							FROM {$prx}{$tbl} AS g
+								LEFT JOIN {$prx}catalog AS s ON s.id=g.id_catalog
+								LEFT JOIN {$prx}catalog AS m ON m.id=s.id_parent
+							ORDER BY g.articul");
+			$y = 0;
+			while($row = mysql_fetch_array($res))
+			{
+				$y++;
+				foreach($fields as $key=>$val)
+					$xls->WriteLabel($y,$key,0,0,0,$row[$val]);
+			}
+			$xls->ExEOF();
+			$xls->SendFileToHTTP("{$tbl}-".date("Y-m-d").'.xls'); // передать файл пользователю на закачку
+			break;
+*/
+		case "import":
+			require_once('inc/excel_import.php');
+			$valuta = $_POST["valuta"];
+			$rows = @excel_make_sheets($_FILES['file']['tmp_name']);
+                     
+                     $strcount = 0;
+                     foreach($rows as $line=>$row)
+			if($line > 8)
+			{
+				list($kod,$name,$price) = $row;
+				$strcount++;
+				<script>document.getElementById("imported").innerHTML="<?=$strcount?>";</script>
+
+				if($kod)
+				{
+					$count["all"]++;
+					$price = str_replace(array(" ", "€", "$"), "", $price);
+					$price = str_replace(",", ".", $price);
+
+					sql("UPDATE {$prx}{$tbl} SET price='{$price}', valuta='{$valuta}' WHERE kod='{$kod}'");
+					$count["update"] += getField("SELECT count(*) AS c FROM {$prx}{$tbl} WHERE kod='{$kod}'");
+
+					// обновляем он-лайн прайсы
+					sql("UPDATE {$prx}price SET price='{$price}', valuta='{$valuta}' WHERE kod='{$kod}' AND razd='0'");
+				}
+			}
+			?><script>
+				alert("Импорт завершен.\r\n\r\nВсего товаров: <?=(int)$count["all"]?>\r\nОбновлено цен: <?=(int)$count["update"]?>");
+				top.document.forms["frmContent"].reset();
+				top.topBack(true);
+			</script><?
+			break;
+	}
+	exit;
+}
+
+ob_start();
+// ------------------РЕДАКТИРОВАНИЕ--------------------
+{	?>
+<!--
+	<table class="content" width="400">
+		<tr>
+			<th colspan="2">Экспортировать товары</th>
+		</tr>
+		<tr>
+			<td><img src="img/ico/xls.gif" width="16" height="16"></td>
+			<td width="100%"><a href="?action=export">Скачать</a></td>
+		</tr>
+	</table>	
+	<br><br>
+-->
+	<form action="?action=import" target="ajax" method="post" name="frmContent" enctype="multipart/form-data">
+		<table class="content" width="450">
+			<tr>
+				<th colspan="3">Импортировать цены</th>
+			</tr>
+			<tr>
+				<td width="100%"><input type="file" name="file" style="width:100%"></td>
+				<td><?=dllEnum("SHOW COLUMNS FROM {$prx}{$tbl} LIKE 'valuta'", "name='valuta' style='width:auto;'")?></td>
+				<td nowrap><?=btnAction("Save", "Загрузить")?></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<b>Поля:</b><br>Код товара, Название, Цена<br>
+					<i>Импорт начинается с 10-ой строки</i>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="3">Обработано строк: <div id="imported"></div></th>
+			</tr>
+		</table>	
+	</form>
+<?
+}
+$content = ob_get_clean();
+$tbl .= "_xls";
+require("template.php");
+?>

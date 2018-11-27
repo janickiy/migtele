@@ -1,0 +1,165 @@
+.toolbar-promocode__wr
+  height: 103px
+.toolbar-promocode
+  border-bottom: 3px solid #000
+  z-index: 30
+  background-color: #fff
+  height: 100px
+  overflow: hidden
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  .toolbar-cell
+    @include transition(all, .2s, ease-in-out)
+    padding: 0
+    box-sizing: border-box
+  .toolbar-reward
+    float: left
+    width: 320px
+    display: none
+
+  .toolbar-coupon
+    float: left
+    width: 100%
+
+  .toolbar-expired
+    display: none
+    width: 320px
+    float: left
+    border-left: 1px solid rgba(0,0,0,0.1)
+  .toolbar-cell__front
+    padding-top: 3px
+    position: relative
+    height: 100px
+    text-align: center
+    .title
+      line-height: 22px
+      font-size: 14px
+      font-weight: 300
+    .toolbar-buttons
+      font-size: 0
+      letter-spacing: 0
+      word-spacing: 0
+      margin-top: 8px
+      .toolbar-buttons__coupon
+        display: inline-block
+        vertical-align: top
+        font-size: 16px
+        font-weight: 300
+        white-space: nowrap
+        padding: 0 10px
+        border: 2px dashed #34495e
+        background: #2ecc71
+        color: #fff
+        border-radius: 3px
+        line-height: 36px
+        margin-right: 10px
+        position: relative
+        text-overflow: clip
+        max-width: 210px
+        overflow: hidden
+      button
+        color: #fff
+        display: inline-block
+        position: relative
+        cursor: pointer
+        padding: 0 15px 0 40px
+        border: none
+        font-size: 14px
+        font-weight: 300
+        text-overflow: clip
+        -webkit-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1)
+        transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1)
+        border-radius: 2px
+        height: 37px
+        line-height: 36px
+        text-shadow: 0 1px 1px rgba(87,151,180,0.36)
+        text-transform: lowercase
+        .icon
+          position: absolute
+          top: calc(50% - 10px)
+          margin-top: 0
+          left: 10px
+          height: 20px
+          width: 20px
+          background-size: cover
+      .toolbar-buttons__coupon_copy
+        background: #3498db
+        box-shadow: 0 3px 0 0 #2980b9
+        text-shadow: 0 1px 1px rgba(41,128,185,0.36)
+        position: relative
+        .icon
+          background-image: url('../img/icons/finger-left.png')
+      .toolbar-buttons__vk_save_wall
+        display: none
+        background: #6688ae
+        box-shadow: 0 3px 0 0 #577ca3
+        margin-left: 10px
+        .icon
+          background-image: url('../img/icons/vk.png')
+    .amount
+      font-size: 32px
+      line-height: 45px
+      text-align: center
+      color: $second-color
+    .cell__footer
+      position: absolute
+      left: 0
+      bottom: 7px
+      text-align: center
+      width: 100%
+      a
+        color: #95a5a6
+        font-size: 13px
+  .toolbar-cell__back
+    position: relative
+    padding-top: 5px
+    height: 100px
+    .toolbar-cell__close
+      position: absolute
+      top: 6px
+      right: 20px
+      background: url('../img/icons/close-cross.png')
+      background-size: cover
+      width: 12px
+      height: 12px
+      display: block
+
+  .toolbar-cell.toolbar-cell__is_back
+    margin-top: -100px
+
+
+  .toolbar-cell__content
+    height: 90px
+    overflow-y: scroll
+    font-size: 14px
+    line-height: 1.42857
+    font-weight: 300
+
+  .toolbar-expired__countdown
+    margin-top: 12px
+    .toolbar-expired__cell
+      display: inline-block
+      margin: 0 4px
+      font-size: 0
+      .toolbar-expired__cell_value
+        div
+          display: inline-block
+          background: #e6ebed
+          color: #000
+          font-weight: 300
+          font-size: 24px
+          line-height: 32px
+          border-radius: 3px
+          width: 27px
+          text-align: center
+          &:first-child
+            margin-right: 1px
+      .toolbar-expired__cell_label
+        font-size: 12px
+        text-align: center
+        font-weight: 300
+        margin-top: 3px
+
+

@@ -1,0 +1,15 @@
+php_flag display_errors off
+php_value upload_max_filesize 10M
+php_value post_max_size 15M
+php_value max_execution_time 300
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+RewriteRule ^.htaccess$ - [F]
+
+#Редирект на www
+RewriteCond %{HTTP_HOST} ^([^www].*)$
+RewriteRule ^(.*)$ http://www.%1/admin/$1 [L,R=301]
+
+DirectoryIndex index.php

@@ -1,0 +1,6 @@
+@include('modals.login')
+@include('modals.feedback')
+@include('modals.callback')
+@include('modals.cart')
+@include('modals.dealer')
+@include('modals.quick_order')

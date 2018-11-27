@@ -1,0 +1,1 @@
+@if($value)<b>{{ $key }}</b>: {{ $value }}<br>@endif

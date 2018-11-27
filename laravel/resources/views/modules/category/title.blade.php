@@ -1,0 +1,1 @@
+<h1 itemprop="name" class="category-title">{{ $title }}</h1>

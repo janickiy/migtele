@@ -1,0 +1,10 @@
+http://randomous.com/tools/floatbox/demo.php
+
+картинка
+<a href="/img/*.jpg" rel="floatbox"><img src="/img/*.jpg"></a>
+галерея
+<a href="/img/*.jpg" rel="floatbox.p"><img src="/img/*.jpg"></a>
+контент
+<a href="/*.htm" rel="floatbox" rev="width:340 height:510">блабла</a>
+текст со страницы
+<a href="#div" rel="floatbox" rev="width:340 height:510">блабла</a>

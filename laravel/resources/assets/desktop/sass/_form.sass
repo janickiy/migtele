@@ -1,0 +1,316 @@
+
+/** Form **/
+
+input.form-control
+  display: block
+  width: 100%
+  box-sizing: border-box
+  line-height: 40px
+  border: none
+  background-color: #f6f6f6
+  color: #212121
+  outline: none
+  margin-bottom: 10px
+  padding: 0 16px
+  font-size: 14px
+
+textarea.form-control
+  display: block
+  width: 100%
+  box-sizing: border-box
+  line-height: 18px
+  border: none
+  background-color: #f6f6f6
+  color: #212121
+  outline: none
+  margin-bottom: 10px
+  padding: 11px 16px
+  font-size: 14px
+  height: 130px
+  resize: none
+
+
+.form-checkbox
+  display: block
+
+.checkbox
+  vertical-align: top
+  margin: 0 3px 0 0
+  width: 23px
+  height: 23px
+
+.checkbox + label
+  cursor: pointer
+
+.checkbox:not(checked)
+  position: absolute
+  opacity: 0
+
+.checkbox:not(checked) + label
+  position: relative
+  padding: 0 0 0 30px
+  line-height: 23px
+
+.checkbox:not(checked) + label:before
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 19px
+  height: 19px
+  border-radius: 3px
+  background: #ffffff
+  border: 2px solid #c1c1c1
+
+.checkbox:not(checked) + label:after
+  content: ''
+  opacity: 0
+  position: absolute
+  top: 8px
+  left: 8px
+  width: 7px
+  height: 7px
+  border-radius: 7px
+  background: $second-color
+  @include transition(all, .3s, ease-in-out)
+
+
+.checkbox:checked + label:after
+  opacity: 1
+
+.checkbox:checked + label
+  color: $second-color
+
+.radio
+  vertical-align: top
+  margin: 0 3px 0 0
+  width: 23px
+  height: 23px
+
+.radio + label
+  cursor: pointer
+
+.radio:not(checked)
+  position: absolute
+  opacity: 0
+
+.radio:not(checked) + label
+  position: relative
+  padding: 0 0 0 30px
+  line-height: 23px
+
+.radio:not(checked) + label:before
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 19px
+  height: 19px
+  border-radius: 3px
+  background: #ffffff
+  border: 2px solid #c1c1c1
+
+.radio:not(checked) + label:after
+  content: ''
+  opacity: 0
+  position: absolute
+  top: 8px
+  left: 8px
+  width: 7px
+  height: 7px
+  border-radius: 7px
+  background: $second-color
+  @include transition(all, .3s, ease-in-out)
+
+
+.radio:checked + label:after
+  opacity: 1
+
+.radio:checked + label
+  color: $second-color
+
+
+button[type="submit"].btn
+  background-color: $second-color
+  border: none
+  cursor: pointer
+  border-radius: 4px
+  color: #fff
+  width: 190px
+  line-height: 28px
+  font-size: 14px
+  outline: none
+  @include transition(all, .3s, ease-in-out)
+  &:hover
+    background-color: darken($second-color, 10)
+
+
+.form-valid-error
+  position: relative
+  input
+    box-sizing: border-box
+    border: 1px solid #cf2535
+    line-height: 28px!important
+  &::before
+    content: '\e814'
+    font-family: "fontello", sans-serif
+    color: #cf2535
+    position: absolute
+    display: block
+    top: 8px
+    right: 10px
+    font-size: 16px
+
+
+.form-before__submit-text
+  color: #212121
+  font-size: 14px
+  line-height: 18px
+  margin: 12px 0 16px
+
+
+.jq-selectbox__select
+  display: block
+  padding: 0 23px 0 12px
+  line-height: 28px
+  font-size: 12px
+  box-shadow: 0 1px 3px rgba(4, 6, 7, .10)
+  border: 1px solid #dedede
+  border-radius: 4px
+  text-align: center
+
+.jq-selectbox__dropdown
+  width: 61px
+  z-index: 10
+  ul
+    width: 100%
+    box-shadow: 0 1px 3px rgba(4, 6, 7, .10)
+    border: 1px solid #dedede
+    border-radius: 4px
+    li
+      display: inline-block
+      width: 100%
+      position: relative
+      text-align: left
+      font-size: 12px
+      line-height: 28px
+      box-sizing: border-box
+      padding-left: 18px
+      background-color: #fff
+      cursor: pointer
+      @include transition(all, .3s, ease-in-out)
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        left: 1px
+        width: calc(100% - 2px)
+        background-color: #dedede
+        height: 1px
+      &:hover
+        background-color: #dbdbdb
+
+.jq-selectbox__trigger
+  display: block
+  position: absolute
+  top: 0
+  right: 8px
+  .jq-selectbox__trigger-arrow
+    &::before
+      content: '>'
+      display: block
+      transform: rotate(90deg)
+
+.form-multiple
+  font-size: 0
+  .form-multiple__input
+    vertical-align: top
+    display: inline-block
+    width: calc(100% - 36px)
+    margin-right: 5px
+  .form-multiple__add
+    vertical-align: bottom
+    display: inline-block
+    width: 28px
+    a
+      display: block
+      width: 31px
+      height: 30px
+      box-sizing: border-box
+      border: 1px solid $second-color
+      position: relative
+      margin-bottom: 6px
+      background-color: #fff
+      &::before, &::after
+        content: ''
+        display: block
+        position: absolute
+        background-color: $second-color
+      &::before
+        width: 14px
+        height: 2px
+        top: 13px
+        left: 8px
+      &::after
+        height: 14px
+        width: 2px
+        top: 7px
+        left: 14px
+      &:hover
+        &::before, &::after
+          opacity: .7
+  .form-multiple__item
+    position: relative
+    .form-multiple__delete
+      position: absolute
+      top: 0
+      right: -36px
+      a
+        display: block
+        width: 31px
+        height: 30px
+        box-sizing: border-box
+        border: 1px solid red
+        position: relative
+        margin-bottom: 6px
+        &::before, &::after
+          content: ''
+          display: block
+          position: absolute
+          background-color: red
+          transform: rotate(-45deg)
+        &::before
+          width: 14px
+          height: 2px
+          top: 13px
+          left: 8px
+        &::after
+          height: 14px
+          width: 2px
+          top: 7px
+          left: 14px
+.form-control
+  &.jq-selectbox
+    width: 100%
+  .jq-selectbox__select
+    box-sizing: border-box
+    width: 100%
+    border-radius: 0
+    background-color: #f6f6f6
+    border: 0
+    box-shadow: none
+  .jq-selectbox__select-text
+    text-align: left
+    width: auto
+  .jq-selectbox__dropdown
+    width: auto
+    ul
+      border-radius: 0
+      background-color: #fff
+      li
+        padding: 0 18px
+
+/** Form **/

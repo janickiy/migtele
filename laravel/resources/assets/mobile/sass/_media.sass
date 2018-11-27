@@ -1,0 +1,1065 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+    .container
+      padding: 0 20px
+
+    .nav-bar
+      height: 90px
+      .container
+        line-height: 90px
+      .toggle-button
+        width: 27px
+        height: 18px
+        background-size: cover
+      .logo
+        width: 136px
+        height: 39px
+        background-size: cover
+        margin-left: 10%
+      .cart
+        .icon
+          font-size: 30px
+        .count
+          width: 40px
+          height: 30px
+          line-height: 30px
+          font-size: 20px
+
+    .search
+      margin: 20px 0 15px
+      height: 50px
+      .icon-search
+        background-size: cover
+        width: 30px
+        height: 30px
+        margin: 10px 15px 0 15px
+      input
+        line-height: 50px
+        font-size: 22px
+        width: calc(100% - 175px)
+      button
+        font-size: 25px
+        line-height: 50px
+        width: 115px
+
+    .heading-1
+      font-size: 26px
+      line-height: 26px
+
+    #product-new
+      margin-top: 15px
+
+    .heading-3
+      font-size: 22px
+      line-height: 22px
+
+    .block-list, .product-list
+      padding: 5px 0
+      .product-list__item, .block-item
+        width: 100%
+        .img
+          min-height: 110px
+          &::before
+            line-height: 110px
+          img
+            max-height: 110px
+        a.title
+          padding: 0 10px
+          font-size: 15px
+          line-height: 18px
+          margin-top: 10px
+          min-height: 36px
+        .price
+          font-size: 18px
+          line-height: 22px
+          margin-top: 10px
+      &.advantages
+        .block-item
+          .title
+            font-size: 18px
+            line-height: 18px
+          .text
+            font-size: 15px
+            line-height: 18px
+            margin-top: 12px
+
+      .owl-item
+        &:first-child
+          margin-right: 20px
+          margin-left: 19px
+          .product-list__item, .block-item
+            margin-left: 0
+        &:last-child
+          margin-right: 0!important
+
+    .category-list
+      margin: 10px 0 13px
+      a, .category-list__item
+        font-size: 15px
+        line-height: 18px
+        padding: 6px 0
+        margin-bottom: 10px
+        margin-right: 10px
+        width: calc(33.3% - 10px)
+        .img
+          min-height: 70px
+          padding: 0 10px
+          &::before
+            line-height: 70px
+          img
+            max-height: 70px
+        .title
+          margin-top: 10px
+          font-size: 14px
+
+    .spoiler-open
+      font-size: 25px
+      line-height: 41px
+
+    #vendor
+      margin-top: 20px
+
+    #advantages
+      margin: 20px 0
+
+    footer.nav-bar
+      margin-top: 20px
+      height: 72px
+      .container
+        line-height: 72px
+
+    #menu
+      ul
+        li
+          a, button
+            font-size: 24px
+            line-height: 70px
+            padding-left: 25px
+            .badge
+              width: 35px
+              line-height: 25px
+              font-size: 17px
+              margin: 25px 30px 0 0
+
+    .img-icon
+      background-size: cover!important
+      background-repeat: no-repeat
+      &.img-icon-list
+        width: 28px
+        height: 24px
+        margin: -4px 23px 0 0
+
+      &.img-icon-block
+        width: 24px
+        height: 24px
+        margin: -5px 28px 0 0
+
+      &.img-icon-cart
+        width: 33px
+        height: 30px
+        margin: 0 22px 0 -3px
+
+      &.img-icon-visit
+        width: 27px
+        height: 24px
+        margin: -8px 23px 0 0
+
+      &.img-icon-login
+        width: 27px
+        height: 30px
+        margin: -3px 23px 0 0
+
+      &.img-icon-garanty
+        width: 27px
+        height: 33px
+        margin: 0 23px 0 0
+
+      &.img-icon-delivery
+        width: 33px
+        height: 24px
+        margin: -2px 18px 0 -3px
+
+      &.img-icon-contact
+        width: 27px
+        height: 27px
+        margin: -3px 23px 0 0
+
+      &.img-icon-phone
+        width: 36px
+        height: 27px
+        margin: -6px 21px 0 -7px
+
+      &.img-icon-email
+        width: 36px
+        height: 27px
+        margin: -6px 21px 0 -7px
+
+      &.img-icon-full
+        width: 30px
+        height: 24px
+        margin: -6px 21px 0 -4px
+
+    .back-link
+      font-size: 22px
+      line-height: 22px
+      margin: 20px 0 25px
+      &::before
+        background-size: cover
+        width: 13px
+        height: 24px
+        margin-right: 15px
+        margin-top: -4px
+
+    .product-code
+      font-size: 20px
+      line-height: 20px
+      margin-top: 10px
+
+    .product-images
+      margin-top: 15px
+      padding: 5px 0
+      img
+        width: auto!important
+        max-height: 150px
+      .owl-item:first-child
+        .product-images__img
+          margin-left: 20px
+
+    .product
+      .category-list
+        margin-top: 15px
+      .product-info__stock
+        .stock
+          padding-left: 35px
+          .title
+            font-size: 22px
+            .icon
+              background-size: cover
+              width: 22px
+              height: 28px
+              left: -32px
+          .value
+            font-size: 25px
+            line-height: 25px
+            margin-top: 5px
+            .stock-count
+              margin: 0 0 0 7px
+              li
+                width: 10px
+                height: 10px
+                margin-right: 4px
+
+      .product-info__list
+        padding: 15px 0 5px
+        ul
+          li
+            margin-bottom: 20px
+            .key
+              font-size: 20px
+              line-height: 20px
+              padding-left: 35px
+              .icon
+                background-size: cover!important
+                &.icon-tag
+                  width: 17px
+                  height: 17px
+                  top: 2px
+                  left: 8px
+                &.icon-method-delivery
+                  width: 20px
+                  height: 20px
+                  top: 0
+                  left: 3px
+                &.icon-card
+                  width: 20px
+                  height: 14px
+                  top: 3px
+                  left: 3px
+                &.icon-garanty
+                  width: 20px
+                  height: 20px
+                  top: 0
+                  left: 3px
+            .value
+              font-size: 20px
+              line-height: 20px
+              margin-left: 11px
+      .count
+        margin-top: 14px
+        .count-minus
+            width: 27px
+            height: 43px
+            &::before
+              height: 3px
+              top: 20px
+        input
+          width: 43px
+          line-height: 40px
+          font-size: 27px
+          margin: 0 15px
+        .count-plus
+          width: 27px
+          height: 43px
+          &::before
+            height: 3px
+            top: 20px
+          &::after
+            width: 3px
+            height: 26px
+            top: 9px
+            left: 13px
+      .product-info__price
+        margin-top: 10px
+        .title
+          font-size: 18px
+          line-height: 55px
+          margin-left: 7%
+          width: 20%
+        .prices
+          width: 48%
+          .old_price
+            font-size: 24px
+            line-height: 24px
+            &::before
+              height: 1px
+              margin-top: 1px
+          .price
+            font-size: 33px
+            line-height: 33px
+        .discount
+          font-size: 18px
+          line-height: 18px
+          margin-top: 17px
+          margin-right: 2%
+
+    .product-button
+      margin-top: 25px
+      line-height: 40px
+      font-size: 25px
+
+    .content
+      .title
+        font-size: 25px
+        line-height: 25px
+        margin-bottom: 12px
+      .text
+        font-size: 20px
+        line-height: 25px
+
+    #product-popular
+      margin-top: 30px
+
+    .quest-block
+      width: 21px
+      height: 21px
+      background-size: cover
+      margin: -3px 0 0 8px
+    .quest-block__text
+      top: 26px
+      right: 6px
+
+
+    .form-group
+      .label
+        line-height: 23px
+        font-size: 23px
+        margin: 20px 0 5px
+
+    .form-group__radio_inline
+      margin-top: 10px
+      .form-radio
+        width: calc(50% - 6px)
+        margin-right: 12px
+
+    .radio+label
+      font-size: 18px
+      padding-left: 60px
+      line-height: 41px
+
+    .radio:not(checked)+label:before
+      width: 32px
+      height: 32px
+      background-size: cover
+      top: 4px
+      left: 14px
+    .radio:checked+label:before
+      background-size: cover
+
+    .form-radio
+      margin-bottom: 10px
+
+    input.form-control
+      font-size: 25px
+      line-height: 25px
+
+    textarea.form-control
+      font-size: 25px
+      line-height: 30px
+
+    .order-amount
+      margin-top: 30px
+      padding: 14px 14px 9px 19px
+
+    .order-amount__left
+      font-size: 23px
+      line-height: 27px
+
+    .order-amount__right
+      font-size: 27px
+      line-height: 27px
+
+    .order-amount__total
+      margin-top: 15px
+      .order-amount__left
+        line-height: 40px
+        margin-top: 0
+      .order-amount__right
+        font-size: 33px
+        line-height: 33px
+
+    .checkbox+label
+      line-height: 33px
+      font-size: 23px
+      padding-left: 50px
+      &::before
+        width: 34px
+        height: 33px
+        border: 1px solid #bcbcbc
+        border-radius: 3px
+
+    .checkbox:checked+label:after
+      width: 27px
+      height: 20px
+      top: 6px
+      left: 4px
+      background-size: cover
+
+    .form-group__checkboxes
+      margin-top: 20px
+      .form-checkbox
+        padding-bottom: 20px
+        margin-bottom: 20px
+
+    .form-recaptcha
+      margin: 15px 0 20px
+
+    button[type="submit"].btn
+      font-size: 25px
+      line-height: 41px
+
+
+    .product-list__block
+      ul
+        li
+          padding: 13px 10px 10px
+          margin-bottom: 12px
+          .title
+            font-size: 23px
+            line-height: 23px
+          .info
+            .img
+              padding-top: 10px
+              min-height: 115px
+              img
+                max-height: 115px
+              &::before
+                line-height: 115px
+            .count
+              margin-top: 14px
+              .count-minus
+                width: 27px
+                height: 43px
+                &::before
+                  height: 3px
+                  top: 20px
+              input
+                width: 43px
+                line-height: 40px
+                font-size: 27px
+                margin: 0 15px
+              .count-plus
+                width: 27px
+                height: 43px
+                &::before
+                  height: 3px
+                  top: 20px
+                &::after
+                  width: 3px
+                  height: 26px
+                  top: 9px
+                  left: 13px
+            .stock-info
+              font-size: 20px
+              line-height: 20px
+              margin-top: -25px
+              &::before
+                width: 5px
+                height: 5px
+                margin: -3px 7px 0 0
+            .price-block
+              .old-price
+                font-size: 24px
+                line-height: 24px
+                &::before
+                  height: 1px
+                  top: 16px
+              .price
+                font-size: 33px
+                line-height: 33px
+              .discount
+                font-size: 18px
+                line-height: 18px
+          .description
+            font-size: 20px
+            line-height: 25px
+            margin-top: 10px
+          .buttons
+            a, button
+              vertical-align: middle
+
+
+    .btn
+      line-height: 41px
+      font-size: 21px
+    .trash
+      font-size: 18px
+      .icon
+        background-size: cover
+        width: 15px
+        height: 20px
+        margin-top: -5px
+        margin-right: 8px
+    .btn-back
+      font-size: 21px
+      line-height: 41px
+      border: 1px solid $default-color
+
+    .cart-buttons
+      margin-top: 20px
+      a
+        width: calc(50% - 5px)
+        margin-right: 10px
+      .btn
+        font-size: 25px
+
+    .cart-amount
+      margin-top: 25px
+
+    .cart-amount__block
+      margin-top: 10px
+      padding: 14px 14px 15px 7px
+      .discount
+        font-size: 16px
+        line-height: 16px
+        margin-top: 8px
+      .total
+        font-size: 18px
+        line-height: 18px
+        .value
+          font-size: 33px
+    .sort-buttons
+      margin: 12px 0 20px
+      a
+        font-size: 18px
+        line-height: 41px
+        border-radius: 3px
+        &.sort-down, &.sort-up
+          &::after
+            background-size: cover
+            width: 27px
+            height: 18px
+            margin-left: 13px
+
+    .product-list__block_subcategory
+      margin-top: 40px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+    .product
+      margin-top: 20px
+    .nav-bar
+      height: 60px
+      .container
+        line-height: 60px
+      .logo
+        margin-left: 10px
+        width: 100px
+        height: 28px
+    #menu
+      ul
+        li
+          a, button
+            padding-left: 15px
+            font-size: 14px
+            line-height: 50px
+            .badge
+              margin: 12px 10px 0 0
+
+    .search
+      margin: 15px 0 10px
+      height: 30px
+      .icon-search
+        background-size: cover
+        width: 20px
+        height: 20px
+        margin: 6px 10px 0 10px
+      input
+        line-height: 30px
+        font-size: 18px
+        width: calc(100% - 125px)
+      button
+        font-size: 18px
+        line-height: 30px
+        width: 85px
+
+    .block-list, .product-list
+      padding: 5px 0
+      .product-list__item, .block-item
+        width: 100%
+        .img
+          min-height: 55px
+          text-align: center
+          &::before
+            line-height: 55px
+          img
+            display: inline-block
+            max-height: 55px
+        a.title
+          padding: 0 5px
+          font-size: 10px
+          line-height: 13px
+          margin-top: 7px
+          min-height: 26px
+        .price
+          font-size: 10px
+          line-height: 14px
+          margin-top: 5px
+      &.advantages
+        .block-item
+          .title
+            font-size: 10px
+            line-height: 10px
+          .text
+            font-size: 8px
+            line-height: 12px
+            margin-top: 6px
+          .img
+            height: 55px
+            margin-top: 8px
+
+    .category-list, .vendor-list
+      a, .category-list__item
+        font-size: 10px
+        line-height: 12px
+        padding: 4px 0
+        .delete
+          width: 16px
+          height: 16px
+          background-size: cover
+        .img
+          min-height: 35px
+          padding: 0 5px
+          &::before
+            line-height: 35px
+          img
+            max-height: 35px
+        .title
+          font-size: 10px
+          margin-top: 5px
+
+    .spoiler-open
+      font-size: 15px
+      line-height: 25px
+      &::after
+        background-size: cover
+        width: 15px
+        height: 8px
+        margin-left: 15px
+
+    .product-list__block
+      ul
+        margin-top: 10px
+        li
+
+          .title
+            font-size: 18px
+            line-height: 18px
+          .info
+            margin-top: 15px
+            .img
+              min-height: 60px
+              &::before
+                line-height: 60px
+              img
+                max-height: 60px
+            .count
+              margin-top: 20px
+            .stock-info
+              font-size: 15px
+              line-height: 15px
+              margin-top: 0
+            .price-block
+              .old-price
+                font-size: 16px
+                line-height: 16px
+                &::before
+                  top: 10px
+              .price
+                font-size: 20px
+                line-height: 20px
+              .discount
+                font-size: 12px
+                line-height: 12px
+          .description
+            font-size: 12px
+            line-height: 15px
+    .count
+      .count-minus
+        width: 13px!important
+        height: 21px!important
+        &::before
+          height: 2px!important
+          top: 12px!important
+      input
+        width: 21px!important
+        line-height: 20px!important
+        font-size: 13px!important
+        margin: 0 7px!important
+      .count-plus
+        width: 13px!important
+        height: 21px!important
+        &::before
+          height: 2px!important
+          top: 12px!important
+        &::after
+          width: 2px!important
+          height: 13px!important
+          top: 6px!important
+          left: 6px!important
+
+    .btn
+      line-height: 30px
+      font-size: 15px
+    .trash
+      font-size: 14px
+      .icon
+        background-size: cover
+        width: 10px
+        height: 13px
+        margin-top: -2px
+        margin-right: 5px
+    .btn-back
+      font-size: 15px
+      line-height: 30px
+      border: 1px solid $default-color
+
+    .cart-amount
+      .discount
+        font-size: 9px
+        line-height: 9px
+        margin-top: 6px
+      .total
+        font-size: 9px
+        line-height: 9px
+        .value
+          font-size: 16px
+          line-height: 16px
+
+
+    .cart-buttons
+      .btn
+        font-size: 16px
+
+
+    .product-images
+      margin-top: 10px
+      .product-images__img
+        padding: 10px 30px
+        max-height: 185px
+        text-align: center
+        img
+          display: inline-block
+          max-height: 90px
+
+    .product-code
+      font-size: 14px
+      line-height: 14px
+
+
+    .product
+      .product-info__stock
+        .stock
+          padding-left: 18px
+          .title
+            font-size: 16px
+            .icon
+              width: 11px
+              height: 14px
+              top: 6px
+              left: -17px
+          .value
+            margin-top: 3px
+            font-size: 16px
+            line-height: 16px
+            .stock-count
+              margin: 4px 0 0 3px
+              vertical-align: middle
+              li
+                width: 5px
+                height: 5px
+                margin-right: 2px
+      .product-info__list
+        padding: 7px 0 3px
+        ul
+          li
+            margin-bottom: 10px
+            .key
+              font-size: 12px
+              line-height: 12px
+              padding-left: 18px
+              .icon
+                &.icon-tag
+                  width: 12px
+                  height: 12px
+                  top: 1px
+                  left: 2px
+                &.icon-method-delivery
+                  width: 14px
+                  height: 14px
+                  top: 0
+                  left: 0
+                &.icon-card
+                  width: 15px
+                  height: 10px
+                  top: 0
+                  left: 0
+                &.icon-garanty
+                  width: 14px
+                  height: 14px
+                  top: -2px
+                  left: 0
+            .value
+              font-size: 12px
+              line-height: 12px
+              margin-left: 5px
+              white-space: nowrap
+              max-width: 120px
+      .product-info__price
+        .title
+          font-size: 10px
+          margin-left: 3%
+        .prices
+          width: 54%
+          .old_price
+            font-size: 14px
+            line-height: 14px
+          .price
+            font-size: 18px
+            line-height: 18px
+        .discount
+          font-size: 12px
+          line-height: 12px
+      .content
+        margin-top: 20px
+    .product-button
+      margin-top: 15px
+
+    .content
+      margin: 10px 0 15px
+      .title
+        font-size: 18px
+        line-height: 18px
+        margin-bottom: 6px
+      .text
+        font-size: 12px
+        line-height: 15px
+
+    .quest-block
+      width: 10px
+      height: 10px
+      margin: 0 0 0 3px
+
+    .form-group
+      .label
+        line-height: 12px
+        font-size: 12px
+        margin: 10px 0 3px
+
+    .form-group__radio_inline
+      margin-top: 5px
+      .form-radio
+        width: calc(50% - 3px)
+        margin-right: 6px
+
+    .radio+label
+      font-size: 8px
+      padding-left: 30px
+      line-height: 21px
+
+    .radio:not(checked)+label:before
+      width: 16px
+      height: 16px
+      background-size: cover
+      top: 2px
+      left: 7px
+
+    .form-radio
+      margin-bottom: 5px
+
+    input.form-control
+      font-size: 12px
+      line-height: 12px
+
+    textarea.form-control
+      font-size: 12px
+      line-height: 16px
+
+    .order-amount
+      margin-top: 15px
+      padding: 7px 7px 5px 9px
+
+    .order-amount__left
+      font-size: 12px
+      line-height: 14px
+
+    .order-amount__right
+      font-size: 14px
+      line-height: 14px
+
+    .order-amount__total
+      margin-top: 7px
+      .order-amount__left
+        line-height: 20px
+        padding-left: 9px
+        margin-top: 0
+      .order-amount__right
+        font-size: 17px
+        line-height: 17px
+
+    .checkbox+label
+      line-height: 17px
+      font-size: 12px
+      padding-left: 25px
+      &::before
+        width: 17px
+        height: 16px
+        border: 1px solid #bcbcbc
+        border-radius: 3px
+
+    .checkbox:checked+label:after
+      width: 14px
+      height: 10px
+      top: 3px
+      left: 2px
+      background-size: cover
+
+    .form-group__checkboxes
+      margin-top: 10px
+      .form-checkbox
+        padding-bottom: 10px
+        margin-bottom: 10px
+
+    .form-recaptcha
+      margin: 8px 0 10px
+
+    .heading-1
+      font-size: 20px
+      line-height: 20px
+
+    .back-link
+      font-size: 11px
+      line-height: 11px
+      margin: 10px 0 12px
+      &::before
+        width: 7px
+        height: 12px
+        margin-right: 7px
+        margin-top: -2px
+
+
+    .sort-buttons
+      margin: 6px 0 10px
+      a
+        font-size: 10px
+        line-height: 20px
+        border-radius: 3px
+        &.sort-down, &.sort-up
+          &::after
+            background-size: cover
+            width: 14px
+            height: 9px
+            margin-left: 7px
+
+    .product-list__block_subcategory
+      margin-top: 30px
+      .category-list__title
+        margin-top: 30px
+
+
+    .heading-3
+      font-size: 16px
+      line-height: 16px
+
+    .category-list__title
+      margin-top: 17px
+
+    .btn-back
+      font-size: 12px
+
+    .nav-bar
+      .cart
+        .icon
+          font-size: 25px
+
+    .payment-titles>div span
+      line-height: 30px
+      height: 30px
+      font-size: 14px
+
+    /**/
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+    .container
+      padding: 0 7px
+
+
+
+/*==========  Mobile First  ==========*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

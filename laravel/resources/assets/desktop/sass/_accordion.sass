@@ -1,0 +1,48 @@
+.accordion
+  margin: 10px 0 26px
+  .title
+    padding: 20px 0 7px
+    border-top: 1px solid #cccccc
+    margin-top: 10px
+    position: relative
+    &:first-child
+      border: none
+    h2
+      cursor: pointer
+      color: $second-color
+      font-size: 14px
+      padding-left: 62px
+    &::before
+      content: ''
+      position: absolute
+      left: 40px
+      top: 24px
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      border-bottom: 5px solid $second-color
+      background-color: transparent
+      transform: rotate(90deg)
+      @include transition(all, .3s, ease-in-out)
+    &.open::before
+      top: 22px
+      transform: rotate(180deg)
+    &::after
+      content: ''
+      position: absolute
+      right: 17px
+      top: 25px
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      border-top: 5px solid $second-color
+      background-color: transparent
+      @include transition(all, .3s, ease-in-out)
+    &.open::after
+      top: 22px
+      border-top: none
+      border-bottom: 5px solid $second-color
+  .text
+    font-size: 13px
+    font-family: $second-font
+    line-height: 18px
+
+

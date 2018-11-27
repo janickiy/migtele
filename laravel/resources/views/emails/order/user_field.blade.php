@@ -1,0 +1,1 @@
+@if($value)<div style="border: 0; font: inherit; font-size: 100%; margin: 0; margin-bottom: 16px; padding: 0; vertical-align: baseline;">{{ $key }}: {{ $value }}</div>@endif

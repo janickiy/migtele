@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+#RewriteRule ^(.*).(zip|gz)$ download.php?link=$1.$2
+
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule ^(.*)$ download.php?link=$1

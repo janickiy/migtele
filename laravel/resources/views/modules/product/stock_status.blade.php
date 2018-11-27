@@ -1,0 +1,1 @@
+<div class="stock-status {{ $product->nalich ? 'stock-status__success' : 'stock-status__default'  }}">{{ $product->nalich ? 'В наличии' : 'Нет в наличии' }}</div>

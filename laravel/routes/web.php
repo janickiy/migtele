@@ -20,15 +20,11 @@ Route::get('/profile/order-cancel/{id}', 'ProfileController@cancelOrder');
 Route::get('/feed/google-merchant', 'GoogleFeedController');
 
 
-
-
 Route::get('/send', 'NotificationController@sendCartProducts');
 Route::post('/ordering', 'OrderController@ordering')->middleware(['requestOrderModify']);
 Route::post('/dealer', 'Forms\DealerController@send');
-
 Route::post('/payment-in-process', 'PaymentController@process');
 Route::get('/pay/success/{hash}', 'PaymentController@success');
-
 Route::get('/sitemap.xml', 'SystemController@sitemap_xml');
 
 Route::domain('www.{slug}.migtele.local')->group(function () {
@@ -36,6 +32,7 @@ Route::domain('www.{slug}.migtele.local')->group(function () {
     Route::get('/', 'CategoryController@vendor');
 
 });
+
 
 Route::middleware(['auth'])->group(function () {
     Route::post('/profile/edit/save', 'ProfileController@save');
@@ -50,7 +47,6 @@ Route::get('/promocode/{code}', 'HomeController@promocode')->name('promocode.sha
 Route::post('/promocode/apply', 'PromocodeController@apply')->name('promocode.apply');
 Route::post('/promocode/remove', 'PromocodeController@remove')->name('promocode.remove');
 Route::post('/promocode/send-friend', 'PromocodeController@sendFriend')->name('promocode.send-friend');
-
 
 
 Route::domain(env('APP_URL'))->group(function () {
@@ -181,10 +177,3 @@ Route::domain(env('APP_URL'))->group(function () {
     }
 
 });
-
-
-
-
-
-
-

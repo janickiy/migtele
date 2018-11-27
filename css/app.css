@@ -1,0 +1,37 @@
+option,
+optgroup {
+  -webkit-appearance: none;
+}
+
+.dp_body td.dp_disabled {
+  color: #acacac;
+}
+
+.btn:disabled {
+  background-color: grey !important;
+  border-color: grey !important;
+}
+
+.js-side-bar {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.load--fullscreen {
+  top: 0;
+  left: 0;
+}
+
+.bg-color-white {
+  background-color: white;
+}
+
+.slick-next,
+.slick-prev {
+  visibility: hidden;
+}
+
+.scheme-container {
+  display: inline-block;
+}
+

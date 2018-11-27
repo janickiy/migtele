@@ -190,7 +190,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\PromocodesServiceProvider::class,
 
-
+        Collective\Html\HtmlServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
@@ -251,7 +252,9 @@ return [
         'Promocodes' => App\Facades\PromocodesFacade::class,
         'Meta'    => App\Helpers\LaravelMeta\Facade::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
-
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ],
 
 ];

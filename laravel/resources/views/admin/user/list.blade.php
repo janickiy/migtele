@@ -32,6 +32,7 @@
                         </div>
                         <br>
                     @endif
+
                     <div class="table-responsive">
                         <table id="userList" class="table table-striped table-bordered table-hover" width="100%">
                             <thead>
@@ -52,6 +53,8 @@
                             </tbody>
                         </table>
                     </div>
+
+
                 </div>
                 <!-- end widget content -->
 

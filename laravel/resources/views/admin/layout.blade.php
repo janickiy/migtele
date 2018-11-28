@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Таларии - Панель управления | @yield('title')</title>
+    <title>Migtele - Панель управления | @yield('title')</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -182,7 +182,7 @@ Use search to find needed section.
         <ul>
 
             <li {!! Request::is('cp') ? ' class="active"' : '' !!}>
-                <a href="{{URL::route('admin.index')}}"><i class="fa fa-fw fa-home"></i> Dashboard</a>
+                <a href="{{URL::route('admin.index')}}"><i class="fa fa-fw fa-list"></i> Dashboard</a>
             </li>
 
 
@@ -200,11 +200,156 @@ Use search to find needed section.
                 </li>
             @endif
 
+            @if($user->hasAccess('admin.news.list'))
+                <li {!! Request::is('cp/news*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.news.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Новости</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.sliders.list'))
+                <li {!! Request::is('cp/sliders*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.sliders.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Слайдер</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.gr.list'))
+                <li {!! Request::is('cp/gr*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.gr.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Группы оборудования</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.otr.list'))
+                <li {!! Request::is('cp/otr*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.otr.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Отрасли оборудования</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.category_vendor_texts.list'))
+                <li {!! Request::is('cp/category_vendor_texts*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.category_vendor_texts.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Тип-ведор тексты</span>
+                    </a>
+                </li>
+            @endif
+
+
+            @if($user->hasAccess('admin.cattype.list'))
+                <li {!! Request::is('cp/cattype*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.cattype.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Типы оборудования</span>
+                    </a>
+                </li>
+            @endif
+
+
+            @if($user->hasAccess('admin.catmaker.list'))
+                <li {!! Request::is('cp/catmaker*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.catmaker.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Разделы</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.tags.list'))
+                <li {!! Request::is('cp/tags*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.tags.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Метки</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.goods.list'))
+                <li {!! Request::is('cp/goods*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.goods.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Товары</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.valuta.list'))
+                <li {!! Request::is('cp/valuta*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.valuta.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Курсы валют</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.clients.list'))
+                <li {!! Request::is('cp/clients*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.clients.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Клиенты</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.orders.list'))
+                <li {!! Request::is('cp/orders*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.orders.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Заказы</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.call_orders.list'))
+                <li {!! Request::is('cp/call_orders*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.call_orders.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Заказы звонка + Вопросы</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.counters.list'))
+                <li {!! Request::is('cp/counters*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.counters.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Счетчики</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.payment_methods.list'))
+                <li {!! Request::is('cp/payment_methods*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.payment_methods.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Способы оплаты</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.delivery_methods.list'))
+                <li {!! Request::is('cp/delivery_methods*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.delivery_methods.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Способы доставки</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.mail_templates.list'))
+                <li {!! Request::is('cp/mail_templates*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.mail_templates.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Шаблоны писем</span>
+                    </a>
+                </li>
+            @endif
+
+            @if($user->hasAccess('admin.visit.list'))
+                <li {!! Request::is('cp/mail_templates*') ? ' class="active"' : '' !!}>
+                    <a href="{{URL::route('admin.visit.list')}}"><i class="fa fa-fw fa-list"></i>
+                        <span class="menu-item-parent">Статистика посещений</span>
+                    </a>
+                </li>
+            @endif
 
 
             @if($user->hasAccess('admin.settings.list'))
                 <li {!! Request::is('cp/settings') ? ' class="active"' : '' !!}>
-                    <a href="{{URL::route('admin.settings.list')}}"><i class="fa fa-fw fa-gears"></i>
+                    <a href="{{URL::route('admin.settings.list')}}"><i class="fa fa-fw fa-list"></i>
                         <span class="menu-item-parent">Настройки приложения</span>
                     </a>
                 </li>

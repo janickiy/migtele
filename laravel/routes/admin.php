@@ -18,46 +18,6 @@ Route::prefix('orders-railway')->group(function () {
         Route::delete('destroy/{id}', 'TrainsController@destroy')->name('admin.trains.destroy')->where('id', '[0-9]+');
     });
 
-    Route::prefix('trains-car')->group(function () {
-        Route::get('', 'TrainsCarController@list')->name('admin.trainscar.list');
-        Route::get('create', 'TrainsCarController@create')->name('admin.trainscar.create');
-        Route::post('store', 'TrainsCarController@store')->name('admin.trainscar.store');
-        Route::get('edit/{id}', 'TrainsCarController@edit')->name('admin.trainscar.edit')->where('id', '[0-9]+');
-        Route::put('update', 'TrainsCarController@update')->name('admin.trainscar.update');
-        Route::delete('destroy/{id}', 'TrainsCarController@destroy')->name('admin.trainscar.destroy')->where('id', '[0-9]+');
-        Route::delete('del-image/{id}', 'TrainsCarController@delImage')->name('admin.trainscar.delimage')->where('id', '[0-9]+');
-    });
-
-    Route::group(['prefix' => 'menu'], function () {
-        Route::get('','MenuController@list')->name('admin.menu.list');
-        Route::get('create/{parent_id?}','MenuController@create')->name('admin.menu.create');
-        Route::post('store','MenuController@store')->name('admin.menu.store');
-        Route::get('edit/{id}','MenuController@edit')->name('admin.menu.edit')->where('id', '[0-9]+');
-        Route::put('update','MenuController@update')->name('admin.menu.update');
-        Route::get('delete/{id}','MenuController@destroy')->name('admin.menu.delete')->where('id', '[0-9]+');
-    });
-
-    Route::get('info/{id}', 'OrdersRailwayController@info')->name('admin.ordersrailway.info')->where('id', '[0-9]+');
-    Route::put('update', 'OrdersRailwayController@update')->name('admin.ordersrailway.update');
-    Route::get('edit-passenger/{id}', 'OrdersRailwayController@editPassenger')->name('admin.ordersrailway.editpassenger')->where('id', '[0-9]+');
-    Route::put('update-passenger', 'OrdersRailwayController@updatePassenger')->name('admin.orders-railway.update_passenger');
-
-   //
-
-});
-
-// пользователи портала
-Route::prefix('portal-users')->group(function () {
-    Route::get('/', 'PortalUsersController@list')->name('admin.portalusers.list');
-    Route::get('edit/{id}', 'PortalUsersController@edit')->name('admin.portalusers.edit')->where('id', '[0-9]+');
-    Route::put('update', 'PortalUsersController@update')->name('admin.portalusers.update');
-    Route::delete('destroy/{id}', 'PortalUsersController@destroy')->name('admin.portalusers.destroy')->where('id', '[0-9]+');
-});
-
-// логи
-Route::prefix('logs')->group(function () {
-    Route::get('/', 'SessionLogController@list')->name('admin.logs.list');
-    Route::get('info/{id}', 'SessionLogController@info')->name('admin.logs.info')->where('id', '[0-9]+');
 });
 
 // пользователи админки
@@ -81,15 +41,88 @@ Route::prefix('role')->group(function () {
     Route::delete('destroy/{id}', 'RoleController@destroy')->name('admin.role.destroy')->where('id', '[0-9]+');
 });
 
-// настройки
-Route::prefix('settings')->group(function () {
-    Route::get('/', 'AppSettingsController@listSettings')->name('admin.settings.list');
-    Route::get('create', 'AppSettingsController@create')->name('admin.settings.create');
-    Route::post('store', 'AppSettingsController@store')->name('admin.settings.store');
-    Route::get('edit/{id}', 'AppSettingsController@edit')->name('admin.settings.edit')->where('id', '[0-9]+');
-    Route::put('update', 'AppSettingsController@update')->name('admin.settings.update');
-    Route::delete('destroy/{id}', 'AppSettingsController@destroy')->name('admin.settings.destroy')->where('id', '[0-9]+');
+
+Route::prefix('pages')->group(function () {
+
 });
+
+Route::prefix('news')->group(function () {
+
+});
+
+Route::prefix('sliders')->group(function () {
+
+});
+
+Route::prefix('gr')->group(function () {
+
+});
+
+Route::prefix('otr')->group(function () {
+
+});
+
+Route::prefix('category_vendor_texts')->group(function () {
+
+});
+
+Route::prefix('cattype')->group(function () {
+
+});
+
+Route::prefix('catmaker')->group(function () {
+
+});
+
+Route::prefix('tags')->group(function () {
+
+});
+
+Route::prefix('goods')->group(function () {
+
+});
+
+Route::prefix('valuta')->group(function () {
+
+});
+
+Route::prefix('clients')->group(function () {
+
+});
+
+Route::prefix('orders')->group(function () {
+
+});
+
+Route::prefix('call_orders')->group(function () {
+
+});
+
+Route::prefix('counters')->group(function () {
+
+});
+
+Route::prefix('settings')->group(function () {
+    Route::get('/', 'SettingsController@list')->name('admin.settings.list');
+});
+
+Route::prefix('payment_methods')->group(function () {
+
+});
+
+Route::prefix('delivery_methods')->group(function () {
+
+});
+
+Route::prefix('mail_templates')->group(function () {
+
+});
+
+Route::prefix('visit')->group(function () {
+
+});
+
+
 
 Route::group(['prefix' => 'datatable'], function () {
     Route::any('sessionlog', 'DataTableController@getSessionLog')->name('admin.datatable.sessionlog');

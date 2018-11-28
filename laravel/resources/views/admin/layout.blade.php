@@ -111,7 +111,7 @@ Use search to find needed section.
     <div id="logo-group">
 
         <!-- PLACE YOUR LOGO HERE -->
-        <span id="logo"> <img src="/images/logo.png" alt="Talarii Control Panel"> </span>
+        <span id="logo"> <img src="/images/logo.png" alt="www.migtele.ru - Администрирование"> </span>
         <!-- END LOGO PLACEHOLDER -->
     </div>
 
@@ -185,39 +185,7 @@ Use search to find needed section.
                 <a href="{{URL::route('admin.index')}}"><i class="fa fa-fw fa-home"></i> Dashboard</a>
             </li>
 
-            <li class="">
-                <a href="#">
-                    <i class="fa fa-fw fa-ticket"></i> <span class="menu-item-parent">ЖД</span>
-                </a>
 
-                <ul class="treeview-menu">
-                    @if($user->hasAccess('admin.ordersrailway.list'))
-                        <li {!! Request::is('cp/orders-railway') ? ' class="active"' : '' !!}>
-                            <a href="{{URL::route('admin.ordersrailway.list')}}"><i class="fa fa-fw fa-bell"></i>Заяки</a>
-                        </li>
-                    @endif
-
-                        @if($user->hasAccess('admin.trains.list'))
-                            <li {!! Request::is('cp/orders-railway/trains*') && !Request::is('cp/orders-railway/trains-car*') ? ' class="active"' : '' !!}><a href="{{URL::route('admin.trains.list')}}"><i class="fa fa-list"></i> Поезда</a></li>
-                        @endif
-
-                    @if($user->hasAccess('admin.trainscar.list'))
-                        <li {!! Request::is('cp/orders-railway/trains-car*') ? ' class="active"' : '' !!}><a href="{{URL::route('admin.trainscar.list')}}"><i class="fa fa-list"></i> Тип вагонов</a></li>
-                    @endif
-                </ul>
-            </li>
-
-            <li {!! Request::is('admin/menu*') ? ' class="active"' : '' !!}>
-                <a href="{{ URL::route('admin.menu.list') }}">
-                    <i class="fa fa-fw fa-folder"></i> <span class="menu-item-parent">Меню</span>
-                </a>
-            </li>
-
-            @if($user->hasAccess('admin.portalusers.list'))
-                <li {!! Request::is('cp/portal-users*') ? ' class="active"' : '' !!}>
-                    <a href="{{URL::route('admin.portalusers.list')}}"><i class="fa fa-fw fa-user"></i> Пользователи портала</a>
-                </li>
-            @endif
 
             @if($user->hasAccess('admin.users.list'))
                 <li class="">
@@ -232,13 +200,7 @@ Use search to find needed section.
                 </li>
             @endif
 
-            @if($user->hasAccess('admin.logs.list'))
-                <li {!! Request::is('cp/logs') ? ' class="active"' : '' !!}>
-                    <a href="{{URL::route('admin.logs.list')}}"><i class="fa fa-fw fa-area-chart"></i>
-                        <span class="menu-item-parent">Логи</span>
-                    </a>
-                </li>
-            @endif
+
 
             @if($user->hasAccess('admin.settings.list'))
                 <li {!! Request::is('cp/settings') ? ' class="active"' : '' !!}>
